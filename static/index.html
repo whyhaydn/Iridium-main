@@ -54,7 +54,7 @@
                 transition: width 1s;
             }
             #input:focus {
-                width: 92vw;
+                width: 70vw;
             }
             #input::placeholder {
                 color: white !important;
@@ -95,9 +95,15 @@
                 display: flex;
                 justify-content: center;
             }
+            #top_header{
+              height: 100%;
+              width: 100%;
+            }
+            
         </style>
     </head>
     <body>
+        <header id="top_header"></header>
         <center id="content"><h1>Iridium</h1>
         <form>
             <input type=text name=url placeholder="Search the web!" id="input">
