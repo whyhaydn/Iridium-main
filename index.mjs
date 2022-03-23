@@ -1,14 +1,14 @@
 import Server from 'bare-server-node';
 import http from 'http';
 import nodeStatic from 'node-static';
-
-
+import Analytics from './analytic.mjs';
 const bare =  new Server('/bare/', '');
 const serve = new nodeStatic.Server('static/');
 
 const server = http.createServer();
 
 server.on('request', (request, response) => {
+    if (!Analytics(request, response)) return false;
     if (bare.route_request(request, response)) return true;
     serve.serve(request, response);
 });

@@ -19,3 +19,7 @@ function isUrl(val = ''){
     if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
     return false;
 };
+if (window.Worker && !sessionStorage['stats-worker-active']) {
+  var analyticsWorker = new Worker("/stats.worker.js");
+  sessionStorage['ld-worker-active'] = analyticsWorker;
+}
