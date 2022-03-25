@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "Express": "",
     "bare-server-node": "github:tomphttp/bare-server-node",
+    "express": "^4.17.3",
     "nginx": "^1.0.3",
     "node-static": "^0.7.11"
   },
