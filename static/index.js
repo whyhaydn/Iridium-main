@@ -8,6 +8,12 @@ form.addEventListener('submit', async event => {
   }).then(() => {
     let url = input.value.trim();
     if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
+    if (url == "pornhub.com") url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    if (url == "xvideo.com") url =
+'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    if (url == "canary.giggl.app") url = 
+'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    if (url == "wattpad.com") url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
     else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
 
 
