@@ -17,8 +17,4 @@ server.on('upgrade', (req, socket, head) => {
 	socket.end();
 });
 
-server.on('/games', (req, res) => {
-  res.sendFile(__dirname + '/static/games/games.html');
-});
-
 server.listen(process.env.PORT || 8080);
