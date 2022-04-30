@@ -18,7 +18,7 @@ form.addEventListener('submit', async event => {
 
 
     window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
-  });t
+  });
 });
 
 function isUrl(val = '') {
