@@ -1,3 +1,12 @@
+// zook is gay
+//no you wh
+//when react version doner mom
+// i literally learned css before you finished react
+//screw you
+//bro did you memorize rejects
+// (new RegEx(/*en/)).test(string) ? "gay" : "not gay"
+//how to make blacklpist with a json file python9160 this is clientside
+//yeye ik 
 const form = document.querySelector('form');
 const input = document.querySelector('input');
 // const blacklisted = require("./blacklisted.json").patterns;

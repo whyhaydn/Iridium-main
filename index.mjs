@@ -5,16 +5,16 @@ import Analytics from './analytic.mjs';
 const bare =  new Server('/bare/', '');
 const serve = new nodeStatic.Server('static/');
 const server = http.createServer();
+const blacklist = require("./blacklisted.json"); 
 
 server.on('request', (request, response) => {
-    if (!Analytics(request, response)) return false;
-    if (bare.route_request(request, response)) return true;
-    serve.serve(request, response);
+  if (!Analytics(request, response)) return false;
+  if (bare.route_request(request, response)) return true;
+  serve.serve(request, response);
 });
 
 server.on('upgrade', (req, socket, head) => {
 	if(bare.route_upgrade(req, socket, head))return;
 	socket.end();
 });
-
 server.listen(process.env.PORT || 8080);
