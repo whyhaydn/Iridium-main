@@ -23,6 +23,6 @@ function minecraft(){
   window.location.href = url
 }
 function geforceNow(){
-  let url = location.href.slice(0, location.href.length-16) + __$uv.config.encodeUrl(https://www.nvidia.com/en-us/geforce-now/')
+  let url = location.href.slice(0, location.href.length-16) + __$uv.config.encodeUrl('https://www.nvidia.com/en-us/geforce-now/')
   window.location.href = url
 }

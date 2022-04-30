@@ -5,7 +5,6 @@ import Analytics from './analytic.mjs';
 const bare =  new Server('/bare/', '');
 const serve = new nodeStatic.Server('static/');
 const server = http.createServer();
-const blacklist = require("./blacklisted.json"); 
 
 server.on('request', (request, response) => {
   if (!Analytics(request, response)) return false;
